@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+    <html lang="em">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>KonVersi | Website</title>
+            <link rel="shortcut icon" href="logo.png" type="image/png" />
+            <link rel="stylesheet" href="style.css" />
+            <script src="https://unpkg.com/feather-icons"></script>
+          </head>
+
+<body>
+    <!-- navbar start -->
+        <nav class="navbar">
+          <a href="#" class="navbar-logo">
+            <!-- <img src="logo.png" alt="Logo" /> -->
+            Kon<span>Versi</span>
+          </a>
+  
+          <div class="navbar-menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            
+          </div>
+
+          <div class="navbar-extra">
+          <a href="#" id="hamburger-menu"><I data-feather="menu"></I></a>
+          </div>
+        </nav>
+<!-- navbar end -->
+<!-- hero end -->
+<section class="hero" id="home">
+      <main class="container">
+        <h1 style="color: #0b0909">KALKULATOR KURS</h1>
+
+        <div class="satu">
+          <input type="number" class="input" />
+        </div>
+
+<div class= "dua">
+    
+    <select class="kurs">
+        <option value="usd"> USD </option>
+        <option value="eur"> EUR </option>
+        <option value="kwd"> KWD </option>
+        <option value="bhd"> BHD </option>
+        <option value="krw"> KRW </option>
+        <option value="omr"> OMR </option>
+        <option value="jod"> JOD </option>
+        <option value="gbp"> GBP </option>
+        <option value="chf"> CHF </option>
+        <option value="cad"> CAD </option>
+    </select>
+</div>
+
+<div class= "tiga">
+    <button class="hitung">Hitung</button>
+</div>
+
+<div class="empat">
+    <p class= "hasil">Hasil: </p>
+</div>
+</main>
+</section>
+<!-- heroend -->
+
+<!-- about section start -->
+ <section id="about" class="about">
+    <h2>About Us</h2>
+
+    <div class="row">
+        <div class="about-img">
+            <img src="img/tentang kami.jpg" alt="tentang kami">
+            <div class="content">
+                <h3>kenapa konversi </h3>
+                <p>"Website konversi mata uang kini menyediakan layanan yang memudahkan pengguna untuk mengubah nilai mata uang asing ke dalam Rupiah Indonesia secara cepat dan akurat. Dengan antarmuka yang user-friendly dan data kurs terkini, pengguna dapat dengan mudah memasukkan jumlah mata uang asing yang ingin dikonversi dan mendapatkan hasil dalam hitungan detik. Proses konversi yang efisien dan intuitif ini memastikan bahwa pengguna mendapatkan nilai tukar yang akurat dan terbaru, menjadikan website ini sebagai alat yang penting bagi mereka yang sering berurusan dengan mata uang asing.""</p>
+            </div>
+        </div>
+    </div>
+ </section>
+
+<!-- about section end -->
+        <script>
+        feather.replace();
+    </script>
+<!-- my java script -->
+<!-- <script src="js/script.js"></script> -->
+
+
+
+
+
+
+   <!-- javascript -->
+   <script>
+    //menyeleksi semua element yang dibutuhkan
+   //querySelector maksudnya adalah untuk menyeleksi elemen pertama dalam dokumen yang cocok dg selector css yang di tentukan
+ const input= document.querySelector(".input");//menyeleksi element input dengan kelas "input"
+ const kursSelect= document.querySelector(".kurs");//menyeleksi elemen select dengan kelas "kurs"
+ const hitungBtn= document.querySelector(".hitung")//menyeleksi elemen button dengan kelas "hitung"
+ const hasil= document.querySelector(".hasil")//menyeleksi elemen paragraf dengan kelas "hasil"
+
+ // Objek yang menyimpan nilai kurs mata uang
+ const kursMataUang = {
+     "usd": 14425,
+     "eur": 15266,
+     "kwd": 46881,
+     "bhd": 38263,
+     "krw": 12,
+     "omr": 37469,
+     "jod": 20349,
+     "gbp": 18113,
+     "chf": 15306,
+     "cad": 10599,
+
+ }
+ // Fungsi untuk memformat angka menjadi format mata uang
+ function formattingMataUang(angka){
+     // Menggunakan objek Intl.NumberFormat untuk memformat angka sesuai dengan lokal ID
+     const hasil = new Intl.NumberFormat(['id','ID']).format(angka);
+     return hasil // Mengembalikan hasil format
+ }
+
+ // Menambahkan event listener untuk tombol "hitung" yang akan dijalankan ketika tombol diklik
+ hitungBtn.addEventListener("click",function(){
+    console.log("butoon di klik")// log ke konsol ketika tombol diklik
+     
+     //mengambil nilai dari elemen input dan select
+     if (kursSelect.value == "usd"){
+         const hasilFormat = formattingMataUang(input.value*kursMataUang.usd);
+         hasil.innerHTML= "Hasil: " + hasilFormat;
+     }else if(kursSelect.value== "eur"){
+        const hasilFormat = formattingMataUang(input.value*kursMataUang.eur);
+         hasil.innerHTML= "Hasil: "+ hasilFormat;
+     }else if(kursSelect.value== "kwd"){
+        const hasilFormat = formattingMataUang(input.value*kursMataUang.kwd);
+         hasil.innerHTML= "Hasil: "+ hasilFormat;
+     }else if(kursSelect.value== "bhd"){
+        const hasilFormat = formattingMataUang(input.value*kursMataUang.bhd);
+         hasil.innerHTML= "Hasil: "+ hasilFormat;
+     }else if(kursSelect.value== "krw"){
+        const hasilFormat = formattingMataUang(input.value*kursMataUang.krw);
+         hasil.innerHTML= "Hasil: "+ hasilFormat;
+     }else if(kursSelect.value== "omr"){
+        const hasilFormat = formattingMataUang(input.value*kursMataUang.omr);
+         hasil.innerHTML= "Hasil: "+ hasilFormat;
+     }else if(kursSelect.value== "jod"){
+        const hasilFormat = formattingMataUang(input.value*kursMataUang.jod);
+         hasil.innerHTML= "Hasil: "+ hasilFormat;
+     }else if(kursSelect.value== "gbp"){
+        const hasilFormat = formattingMataUang(input.value*kursMataUang.gbp);
+         hasil.innerHTML= "Hasil: "+ hasilFormat;
+     }else if(kursSelect.value== "chf"){
+        const hasilFormat = formattingMataUang(input.value*kursMataUang.chf);
+         hasil.innerHTML= "Hasil: "+ hasilFormat;
+     }else {
+        const hasilFormat = formattingMataUang(input.value*kursMataUang.cad);
+         hasil.innerHTML= "Hasil: "+ hasilFormat;
+     }
+ } )
+</script>
+
+<footer>
+    <div class="socials">
+        <a href="https://www.instagram.com/rifqifauzie_/?hl=id"><i data-feather="instagram"></i></a>
+        <a href="https://web.facebook.com/rifqiilhamifauzi.iki?locale=id_ID"><i data-feather="facebook"></i></a>
+        <a href="https://www.youtube.com/channel/UCyIXUm5PCCeemdvqhU7maQg"><i data-feather="youtube"></i></a>
+
+    </div>
+    <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+    </div>
+    
+    <div class="credit">
+        <p>Created by <span>RifqiIlhamiFauzi</span> . | &copy; 2024.</p>
+    </div>
+</footer>
+<script>
+    feather.replace();
+</script>
+</body>
+</html>

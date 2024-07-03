@@ -1,0 +1,353 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: arial, sans-serif;
+    background-color: white;
+    color: black;
+    /* min-height: 2000px; */
+    
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7% ;
+    background-color: rgba(1, 1, 1,0.8);
+    border-bottom: 1px solid gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    
+   
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem ;
+    font-weight: 700;
+    color: #ccc;
+    padding:5px;
+    
+}
+
+ 
+.navbar .navbar-logo span {
+    color: #c58554;
+    font-style: italic;
+    
+}
+
+.navbar .navbar-menu a{
+    color: white;
+    display: inline-block;
+    font-size: 1 rem;
+    margin: 0 1rem;
+   
+    
+}
+
+.navbar .navbar-menu a:hover{
+    color: rgb(190, 126, 31);
+}
+
+.navbar .navbar-menu a:hover::after{
+    content: '';
+    display:block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem #cb9426 ;
+    transform: scaleX(1);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-logo a:hover::after{
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a{
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover{
+    color: #cb9426;
+}
+
+/* #hamburger-menu {
+    display: none;
+}
+.navbar-menu a {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0px 10px;
+}
+
+.navbar .navbar-menu a:hover {
+    color: var(--primary);
+} */
+
+/* media queris */
+/* laptop */
+/* @media(max-width: 1366px){
+    html{
+        font-size: 70%;
+    }
+    } */
+    
+    /* tablet */
+    /* @media(max-width: 758px){
+        html{
+            font-size: 62.5%;
+        }
+        #hamburger-menu{
+            display:inline-block ;
+        }
+
+
+
+        .navbar .navbar-menu{
+            position: absolute;
+            top: 100%;
+            right: -100%;
+            background-color: black;
+            width: 30rem;
+            height: 100vh;
+            transition: 0.3s;
+        }
+        .navbar .navbar-menu.active{
+            right: 0;
+        }
+        
+        }
+
+        .navbar .navbar-menu a{
+             color: #fff;
+             display: block;
+             margin: 1.5rem;
+             padding: 0.5rem;
+             font-size: 2rem;
+        }
+        
+
+    .navbar .navbar-menu a:hover::after{
+        transform-origin: 0 0;
+        
+    }
+
+.navbar .navbar-menu a:hover::after{
+   transform: scaleX(0.2);
+   } */
+
+
+
+
+        /* mobile phone */
+    /* @media(max-width: 450){
+            html{
+                font-size: 55%;
+            }
+            } */
+
+/* hero */
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    background-repeat: no-repeat;
+   
+}
+.hero::after{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 3% rgba(1,1,3,1)25%);
+}
+
+
+/* Container styling */
+.hero .container {
+    max-width: 500px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2rem 7%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; /* Make the container take all available space */
+    position: relative;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+
+.satu, .dua, .tiga, .empat {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.about {
+    font-family: sans-serif;
+}
+
+.input, .kurs {
+    width: 80%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.hitung {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 80%;
+}
+
+.hitung:hover {
+    background: #555;
+}
+
+
+.hasil {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+
+/* about styling start */
+.about{
+    padding: 8rem 7% 1.4rem;
+}
+
+
+.about h2{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span{
+    color:#cb9426 ;
+}
+
+.about .row{
+    display: flex;
+}
+
+.about .row .about-img{
+    flex: 1 1 45rem;
+
+}
+
+.about .row .about-img img{
+    width: 100%;
+
+}
+
+.about .row .content{
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3{
+    font-size: 1.8rem;
+    margin-top:  1rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p{
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+/* about styling end */
+
+/* Footer styling */
+footer {
+    background-color: rgba(1, 1, 1,0.8);
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem; 
+}
+
+footer .socials  {
+    padding: 1rem 0;
+}
+
+footer .socials a {
+    color: #ffffff;
+    margin: 1rem;
+}
+
+footer .socials a:hover
+,
+footer .links a:hover {
+    color: #cb9426 
+}
+
+footer .links {
+    margin-bottom: 10px;
+}
+
+footer .links a {
+    color: #ffffff;
+    padding: 0.7rem 1rem;
+}
+
+.footer .credit{
+    font-size: 0.8rem;
+}
+
+span{
+    color:#cb9426 ;
+    font-weight: 700;
+}
+
+
+
+
+
+/* Responsive styling
+@media (max-width: 600px) {
+    .input, .kurs, .hitung {
+        width: 100%;
+    }
+}
+
+a {
+    text-decoration: none;
+} */
